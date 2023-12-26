@@ -8,7 +8,7 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_route53_record" "records" {
+resource "aws_route53_record" "record" {
   zone_id = var.zone_id
   name    = "${var.name}.rdevops57online.com"
   type    = "A"
