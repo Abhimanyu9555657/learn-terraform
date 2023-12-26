@@ -1,11 +1,11 @@
-data "aws_ami_ids" "ami" {
+data "aws_ami" "ami" {
   most_recent = true
   name_regex       = "Centos-8-Devops-Practice"
   owners           = ["973714476881"]
 }
 
 output "ami" {
-  value = "data.aws_ami_ids.ami"
+  value = "data.aws_ami.ami"
 }
 
 resource "aws_instance" "instance" {
